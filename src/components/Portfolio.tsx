@@ -26,46 +26,35 @@ const Portfolio = () => {
 
   return (
     <section id="work" className="py-32 bg-muted">
-      <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <h2 className="text-minimal text-muted-foreground mb-4">SELECTED WORK</h2>
-            <h3 className="text-4xl md:text-6xl font-light text-architectural">
-              Our Projects
-            </h3>
-          </div>
-          
-          <div className="space-y-32">
-            {projects.map((project, index) => (
-              <div key={index} className="group">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-[70vh] object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </div>
-                
-                <div className="mt-8 grid md:grid-cols-3 gap-8">
-                  <div>
-                    <h4 className="text-2xl font-light text-architectural mb-2">
-                      {project.title}
-                    </h4>
-                    <p className="text-minimal text-muted-foreground">
-                      {project.location}
-                    </p>
-                  </div>
-                  
-                  <div className="md:col-span-2">
-                    <p className="text-muted-foreground leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
+      <div className="mx-auto px-12 md:px-20 lg:px-32">
+        <div className="mb-20">
+          <h2 className="text-minimal text-muted-foreground mb-4">SELECTED WORK</h2>
+          <h3 className="text-4xl md:text-6xl font-light text-architectural">
+            Our Projects
+          </h3>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
+          {projects.map((project, index) => (
+            <div key={index} className="group cursor-pointer">
+              <div className="relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full aspect-[4/5] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                />
               </div>
-            ))}
-          </div>
+              
+              <div className="mt-6">
+                <h4 className="text-xl font-light text-architectural mb-1">
+                  {project.title}
+                </h4>
+                <p className="text-minimal text-muted-foreground">
+                  {project.location}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
