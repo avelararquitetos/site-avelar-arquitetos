@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
+import Slideshow from "@/components/Slideshow";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -10,9 +11,10 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      <Portfolio />
+      <Slideshow />
       <Services />
       <About />
-      <Portfolio />
       <Contact />
     </div>
   );
