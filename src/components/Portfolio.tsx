@@ -5,7 +5,7 @@ const Portfolio = () => {
   const projects = [{
     image: project1,
     title: "CASA LAGOA",
-    location: "NEW YORK, 2024",
+    location: "LAGOA SANTA",
     description: "A contemporary home focusing on light, space, and material honesty"
   }, {
     image: project2,
