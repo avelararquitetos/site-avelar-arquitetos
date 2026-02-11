@@ -4,7 +4,7 @@ import project3 from "@/assets/project-3.jpg";
 const Portfolio = () => {
   const projects = [{
     image: project1,
-    title: "MINIMAL RESIDENCE",
+    title: "CASA LAGOA",
     location: "NEW YORK, 2024",
     description: "A contemporary home focusing on light, space, and material honesty"
   }, {
