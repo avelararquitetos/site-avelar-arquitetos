@@ -14,8 +14,8 @@ const Portfolio = () => {
     description: "Espaço de escritório moderno enfatizando colaboração e elementos naturais"
   }, {
     image: project3,
-    title: "CENTRO CULTURAL",
-    location: "TÓQUIO, 2023",
+    title: "APTº NOVA LIMA - MG",
+    location: "\n",
     description: "Arquitetura pública que conecta tradição com design contemporâneo"
   }];
   return <section id="work" className="py-32 bg-muted">
