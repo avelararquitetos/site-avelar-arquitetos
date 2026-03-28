@@ -6,22 +6,22 @@ const Portfolio = () => {
     image: project1,
     title: "CASA LAGOA",
     location: "LAGOA SANTA",
-    description: "A contemporary home focusing on light, space, and material honesty"
+    description: "Uma casa contemporânea focada em luz, espaço e honestidade material"
   }, {
     image: project2,
-    title: "CORPORATE HEADQUARTERS",
-    location: "LONDON, 2023",
-    description: "Modern office space emphasizing collaboration and natural elements"
+    title: "SEDE CORPORATIVA",
+    location: "LONDRES, 2023",
+    description: "Espaço de escritório moderno enfatizando colaboração e elementos naturais"
   }, {
     image: project3,
-    title: "CULTURAL CENTER",
-    location: "TOKYO, 2023",
-    description: "Public architecture that bridges tradition with contemporary design"
+    title: "CENTRO CULTURAL",
+    location: "TÓQUIO, 2023",
+    description: "Arquitetura pública que conecta tradição com design contemporâneo"
   }];
   return <section id="work" className="py-32 bg-muted">
       <div className="mx-auto px-12 md:px-20 lg:px-32">
         <div className="mb-20">
-          <h2 className="text-minimal text-muted-foreground mb-4">SELECTED WORK</h2>
+          <h2 className="text-minimal text-muted-foreground mb-4">TRABALHOS SELECIONADOS</h2>
           <h3 className="text-4xl md:text-6xl font-light text-architectural">Nossos Projetos</h3>
         </div>
         
