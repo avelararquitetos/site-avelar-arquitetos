@@ -14,7 +14,6 @@ const Contact = () => {
   return <section id="contact" className="py-32 bg-background">
       <div className="mx-auto px-12 md:px-20 lg:px-32">
         <div className="grid md:grid-cols-2 gap-20">
-          {/* Form */}
           <div>
             <h2 className="text-minimal text-muted-foreground mb-4">CONTATO</h2>
             <h3 className="text-4xl md:text-5xl font-light text-architectural mb-14">
@@ -22,7 +21,7 @@ const Contact = () => {
             </h3>
 
             {submitted ? <p className="text-lg text-muted-foreground">
-                Mensagem enviada — entraremos em contacto em breve.
+                Mensagem enviada — entraremos em contato em breve.
               </p> : <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
                   <label htmlFor="name" className="text-minimal text-muted-foreground mb-2 block">
@@ -57,20 +56,19 @@ const Contact = () => {
               </form>}
           </div>
 
-          {/* Info */}
           <div className="flex flex-col justify-between">
             <div className="space-y-10">
               <div>
                 <h4 className="text-minimal text-muted-foreground mb-2">EMAIL</h4>
-                <a href="mailto:hello@archstudio.com" className="text-xl hover:text-muted-foreground transition-colors duration-300">contato@avelararquitetos.com.br</a>
+                <a href="mailto:contato@avelararquitetos.com.br" className="text-xl hover:text-muted-foreground transition-colors duration-300">contato@avelararquitetos.com.br</a>
               </div>
               <div>
                 <h4 className="text-minimal text-muted-foreground mb-2">TELEFONE</h4>
-                <a href="tel:+351912345678" className="text-xl hover:text-muted-foreground transition-colors duration-300">+55 31 3157-2813</a>
+                <a href="tel:+553131572813" className="text-xl hover:text-muted-foreground transition-colors duration-300">+55 31 3157-2813</a>
               </div>
               <div>
                 <h4 className="text-minimal text-muted-foreground mb-2">INSTAGRAM</h4>
-                <a href="https://instagram.com/archstudio" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-muted-foreground transition-colors duration-300">@avelar.arquitetos</a>
+                <a href="https://instagram.com/avelar.arquitetos" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-muted-foreground transition-colors duration-300">@avelar.arquitetos</a>
               </div>
             </div>
 
