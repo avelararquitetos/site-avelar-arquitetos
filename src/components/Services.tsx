@@ -14,6 +14,11 @@ const Services = () => {
       number: "03",
       title: "CONSULTORIA",
       description: "Orientação especializada em direção criativa, planejamento espacial e soluções arquitetônicas para quem busca apoio pontual em seus projetos"
+    },
+    {
+      number: "04",
+      title: "GESTÃO DE OBRA",
+      description: "Administração e acompanhamento técnico de obra, garantindo qualidade, cumprimento de prazos e fidelidade ao projeto"
     }
   ];
 
