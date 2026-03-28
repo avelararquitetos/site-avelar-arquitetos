@@ -6,15 +6,21 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-minimal text-muted-foreground mb-4">SOBRE NÓS</h2>
-              <h3 className="text-4xl md:text-6xl font-light text-architectural mb-12">
-                Filosofia de Design
+                <h3 className="text-4xl md:text-6xl font-light text-architectural mb-12">
+                Arquitetura Contemporânea com Identidade
+
               </h3>
               
               <div className="space-y-8">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Acreditamos que a arquitetura deve enriquecer a experiência humana 
-                  respeitando o ambiente natural. Nossa prática foca em criar espaços 
-                  que sejam funcionais e poéticos.
+                  À frente do Avelar Arquitetos, o arquiteto Daniel Avelar transforma sonhos em projetos há mais de 13 anos no mercado mineiro. Especializado em residências exclusivas, o escritório desenvolve cada projeto como uma resposta única às necessidades e estilo de vida dos clientes, sempre com um olhar contemporâneo e atento aos detalhes.
+
+                  Com rigor técnico e sensibilidade estética, nossos projetos unem:
+                  ✔ Funcionalidade inteligente - soluções personalizadas para cada modo de viver
+                  ✔ Estética contemporânea - linhas limpas e integração de materiais
+                  ✔ Detalhamento preciso - desde o estudo preliminar até a execução
+
+                  Na Avelar Arquitetos, acreditamos que a melhor arquitetura é aquela que traduz personalidade em espaços que inspiram.
                 </p>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed">
