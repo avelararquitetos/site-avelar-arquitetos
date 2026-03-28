@@ -5,7 +5,7 @@ const Portfolio = () => {
   const projects = [{
     image: project1,
     title: "CASA LAGOA",
-    location: "LAGOA SANTA",
+    location: "LAGOA SANTA - MG",
     description: "Uma casa contemporânea focada em luz, espaço e honestidade material"
   }, {
     image: project2,
