@@ -9,8 +9,8 @@ const Portfolio = () => {
     description: "Uma casa contemporânea focada em luz, espaço e honestidade material"
   }, {
     image: project2,
-    title: "SEDE CORPORATIVA",
-    location: "LONDRES, 2023",
+    title: "CASA SETE",
+    location: "NOVA LIMA - MG",
     description: "Espaço de escritório moderno enfatizando colaboração e elementos naturais"
   }, {
     image: project3,
