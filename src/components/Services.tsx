@@ -3,22 +3,17 @@ const Services = () => {
     {
       number: "01",
       title: "RESIDENCIAL",
-      description: "Criando lares que refletem estilos de vida individuais mantendo a integridade arquitetônica"
+      description: "Projetos completos de arquitetura e design de interiores para residências — do conceito à execução, criando espaços que unem funcionalidade, conforto e identidade"
     },
     {
-      number: "02", 
-      title: "COMERCIAL",
-      description: "Projetando espaços funcionais que aprimoram ambientes de negócios e experiências dos usuários"
+      number: "02",
+      title: "CURADORIA DE MOBILIÁRIOS",
+      description: "Seleção personalizada de mobiliário, iluminação e objetos de design, alinhados ao conceito do projeto e ao estilo de vida de cada cliente"
     },
     {
       number: "03",
-      title: "REFORMA",
-      description: "Transformando estruturas existentes com sensibilidades contemporâneas e práticas sustentáveis"
-    },
-    {
-      number: "04",
       title: "CONSULTORIA",
-      description: "Oferecendo orientação especializada em direção de design, planejamento e soluções arquitetônicas"
+      description: "Orientação especializada em direção criativa, planejamento espacial e soluções arquitetônicas para quem busca apoio pontual em seus projetos"
     }
   ];
 
