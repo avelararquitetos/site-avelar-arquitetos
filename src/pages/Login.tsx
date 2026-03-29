@@ -38,7 +38,7 @@ const Login = () => {
     <div className="min-h-screen bg-background flex items-center justify-center px-6">
       <div className="w-full max-w-sm space-y-8">
         <div className="text-center">
-          <h1 className="text-3xl font-light text-foreground mb-2">AVELAR ARQUITETOS</h1>
+          <img src="/src/assets/logo.png" alt="Avelar Arquitetos" className="h-8 mx-auto mb-2 dark:invert" />
           <p className="text-muted-foreground">
             {isSignUp ? "Criar conta de administrador" : "Acesso administrativo"}
           </p>
