@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation";
-
+import danielPhoto from "@/assets/daniel-avelar.png";
 const About = () => {
   return (
     <div className="min-h-screen">
@@ -7,7 +7,12 @@ const About = () => {
       <section className="pt-32 pb-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-20 items-center">
+            <div className="grid md:grid-cols-2 gap-20 items-start">
+              <div>
+                <img src={danielPhoto} alt="Daniel Avelar" className="w-full aspect-[3/4] object-cover object-top rounded-sm mb-6" />
+                <p className="text-lg font-light text-foreground">Daniel Avelar</p>
+                <p className="text-sm text-muted-foreground">Arquiteto & Fundador</p>
+              </div>
               <div>
                 <h1 className="text-minimal text-muted-foreground mb-4">SOBRE NÓS</h1>
                 <h2 className="text-4xl md:text-6xl font-light text-architectural mb-12">
