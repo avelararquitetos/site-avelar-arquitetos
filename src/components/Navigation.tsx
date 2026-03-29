@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  return <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-none border-b-0">
+  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" className="text-minimal text-foreground shadow-none rounded-xl hover:text-muted-foreground transition-colors duration-300">AVELAR ARQUITETOS</a>
         
