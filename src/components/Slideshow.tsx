@@ -1,14 +1,6 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-
-const checkLandscape = (url: string): Promise<boolean> =>
-  new Promise((resolve) => {
-    const img = new Image();
-    img.onload = () => resolve(img.naturalWidth >= img.naturalHeight * 1.2);
-    img.onerror = () => resolve(false);
-    img.src = url;
-  });
 
 const Slideshow = () => {
   const [current, setCurrent] = useState(0);
