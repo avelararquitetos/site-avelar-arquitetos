@@ -27,19 +27,31 @@ const Slideshow = () => {
       const all = (data || []).map((img) => ({
         image: img.image_url,
         concept: (img.projects as any)?.title || "",
+        project_id: img.project_id,
       }));
 
       // Filter only landscape images
       const checks = await Promise.all(all.map((s) => checkLandscape(s.image)));
       const landscape = all.filter((_, i) => checks[i]);
 
+      // Pick up to 2 images per project
+      const perProject = new Map<string, typeof landscape>();
+      for (const slide of landscape) {
+        const arr = perProject.get(slide.project_id) || [];
+        if (arr.length < 2) {
+          arr.push(slide);
+          perProject.set(slide.project_id, arr);
+        }
+      }
+      const selected = Array.from(perProject.values()).flat();
+
       // Shuffle
-      for (let i = landscape.length - 1; i > 0; i--) {
+      for (let i = selected.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [landscape[i], landscape[j]] = [landscape[j], landscape[i]];
+        [selected[i], selected[j]] = [selected[j], selected[i]];
       }
 
-      return landscape;
+      return selected;
     },
     staleTime: 1000 * 60 * 5,
   });
