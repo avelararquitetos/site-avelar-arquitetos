@@ -11,14 +11,17 @@ const About = () => {
               <div>
                 <h1 className="text-minimal text-muted-foreground mb-4">SOBRE NÓS</h1>
                 <h2 className="text-4xl md:text-6xl font-light text-architectural mb-12">
-                  Filosofia de Design
+                  Arquitetura Contemporânea com Identidade
                 </h2>
                 
                 <div className="space-y-8">
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Acreditamos que a arquitetura deve enriquecer a experiência humana 
-                    respeitando o ambiente natural. Nossa prática foca em criar espaços 
-                    que sejam funcionais e poéticos.
+                  <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
+                    Transformando sonhos em projetos. Especializado em residências exclusivas, o escritório desenvolve cada projeto como uma resposta única às necessidades e estilo de vida dos clientes, sempre com um olhar contemporâneo e atento aos detalhes.
+
+Com rigor técnico e sensibilidade estética, nossos projetos unem:
+✔ Funcionalidade inteligente - soluções personalizadas para cada modo de viver
+✔ Estética contemporânea - linhas limpas e integração de materiais
+✔ Detalhamento preciso - desde o estudo preliminar até a execução
                   </p>
                   
                   <p className="text-lg text-muted-foreground leading-relaxed">
