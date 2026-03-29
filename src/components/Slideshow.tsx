@@ -1,54 +1,51 @@
 import { useState, useEffect, useCallback } from "react";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import heroImage from "@/assets/hero-architecture.jpg";
-
-const slides = [
-  {
-    image: project1,
-    concept: "Espaços que respiram — onde a luz natural define cada ambiente.",
-  },
-  {
-    image: project2,
-    concept: "Materialidade honesta — betão, madeira e vidro em equilíbrio.",
-  },
-  {
-    image: heroImage,
-    concept: "Integração com a paisagem — arquitectura que pertence ao lugar.",
-  },
-  {
-    image: project3,
-    concept: "Forma segue intenção — cada detalhe com propósito.",
-  },
-];
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 
 const Slideshow = () => {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  const { data: slides = [] } = useQuery({
+    queryKey: ["slideshow-images"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("project_images")
+        .select("image_url, project_id, projects(title)")
+        .order("display_order", { ascending: true });
+
+      if (error) throw error;
+      return (data || []).map((img) => ({
+        image: img.image_url,
+        concept: (img.projects as any)?.title || "",
+      }));
+    },
+  });
+
   const goTo = useCallback(
     (index: number) => {
-      if (isTransitioning || index === current) return;
+      if (isTransitioning || index === current || slides.length === 0) return;
       setIsTransitioning(true);
       setTimeout(() => {
         setCurrent(index);
         setIsTransitioning(false);
       }, 600);
     },
-    [current, isTransitioning]
+    [current, isTransitioning, slides.length]
   );
 
   useEffect(() => {
+    if (slides.length === 0) return;
     const timer = setInterval(() => {
       goTo((current + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [current, goTo]);
+  }, [current, goTo, slides.length]);
+
+  if (slides.length === 0) return null;
 
   return (
     <section className="relative h-screen overflow-hidden bg-foreground">
-      {/* Images */}
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -60,10 +57,8 @@ const Slideshow = () => {
         />
       ))}
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* Concept text */}
       <div className="absolute bottom-16 left-12 md:left-20 lg:left-32 right-12 md:right-20 lg:right-32 z-10 flex items-end justify-between gap-8">
         <p
           className={`text-white/90 text-lg md:text-2xl font-light max-w-xl leading-relaxed transition-all duration-600 ${
@@ -73,10 +68,9 @@ const Slideshow = () => {
           }`}
           style={{ transition: "opacity 0.5s ease, transform 0.5s ease" }}
         >
-          {slides[current].concept}
+          {slides[current]?.concept}
         </p>
 
-        {/* Dots */}
         <div className="flex gap-3 shrink-0">
           {slides.map((_, i) => (
             <button
