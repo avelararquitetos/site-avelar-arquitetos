@@ -25,7 +25,7 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <h3 className="text-minimal text-muted-foreground mb-2">TELEFONE</h3>
+                    <h3 className="text-minimal text-muted-foreground mb-2">WHATSAPP</h3>
                     <a href="tel:+553131572813" className="text-xl hover:text-muted-foreground transition-colors duration-300">
                       +55 31 3157-2813
                     </a>
@@ -34,7 +34,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-minimal text-muted-foreground mb-2">ESCRITÓRIO</h3>
                     <address className="text-xl not-italic">
-                      Lagoa Santa
+                      Belo Horizonte
                       <br />
                       Minas Gerais, Brasil
                     </address>
@@ -53,7 +53,7 @@ const Contact = () => {
                       LinkedIn
                     </a>
                     <a href="#" className="block text-xl hover:text-muted-foreground transition-colors duration-300">
-                      Behance
+                      
                     </a>
                   </div>
                 </div>
