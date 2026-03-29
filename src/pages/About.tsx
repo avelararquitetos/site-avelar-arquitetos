@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import danielPhoto from "@/assets/daniel-avelar.png";
 
 const About = () => {
   return (
@@ -7,16 +8,23 @@ const About = () => {
       <section className="pt-32 pb-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-20 items-center">
+            <div className="grid md:grid-cols-2 gap-20 items-start">
               <div>
-                <h1 className="text-minimal text-muted-foreground mb-4">SOBRE NÓS</h1>
-                <h2 className="text-4xl md:text-6xl font-light text-architectural mb-12">
-                  Arquitetura Contemporânea com Identidade
-                </h2>
-                
-                <div className="space-y-8">
-                  <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line text-justify">
-                    Transformando sonhos em projetos. Especializado em residências exclusivas, o escritório desenvolve cada projeto como uma resposta única às necessidades e estilo de vida dos clientes, sempre com um olhar contemporâneo e atento aos detalhes.
+                <img src={danielPhoto} alt="Daniel Avelar" className="w-full aspect-[3/4] object-cover object-top rounded-sm mb-6" />
+                <p className="text-lg font-light text-foreground">Daniel Avelar</p>
+                <p className="text-sm text-muted-foreground">Arquiteto & Fundador</p>
+              </div>
+
+              <div className="space-y-12">
+                <div>
+                  <h1 className="text-minimal text-muted-foreground mb-4">SOBRE NÓS</h1>
+                  <h2 className="text-4xl md:text-6xl font-light text-architectural mb-12">
+                    Arquitetura Contemporânea com Identidade
+                  </h2>
+                  
+                  <div className="space-y-8">
+                    <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line text-justify">
+                      Transformando sonhos em projetos. Especializado em residências exclusivas, o escritório desenvolve cada projeto como uma resposta única às necessidades e estilo de vida dos clientes, sempre com um olhar contemporâneo e atento aos detalhes.
 
 
 
@@ -24,15 +32,14 @@ Com rigor técnico e sensibilidade estética, nossos projetos unem:
 ✔ Funcionalidade inteligente - soluções personalizadas para cada modo de viver.
 ✔ Estética contemporânea - linhas limpas e integração de materiais.
 ✔ Detalhamento preciso - desde o estudo preliminar até a execução.
-                  </p>
-                  
-                  <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
-                    Na Avelar Arquitetos, acreditamos que a melhor arquitetura é aquela que traduz personalidade em espaços que inspiram.
-                  </p>
+                    </p>
+                    
+                    <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
+                      Na Avelar Arquitetos, acreditamos que a melhor arquitetura é aquela que traduz personalidade em espaços que inspiram.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="space-y-12">
+
                 <div>
                   <h3 className="text-minimal text-muted-foreground mb-6">ABORDAGEM</h3>
                   <div className="space-y-6">
