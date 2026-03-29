@@ -15,7 +15,7 @@ const About = () => {
                 </h2>
                 
                 <div className="space-y-8">
-                  <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
+                  <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line text-justify">
                     Transformando sonhos em projetos. Especializado em residências exclusivas, o escritório desenvolve cada projeto como uma resposta única às necessidades e estilo de vida dos clientes, sempre com um olhar contemporâneo e atento aos detalhes.
 
 
