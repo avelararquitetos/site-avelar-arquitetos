@@ -25,7 +25,7 @@ const Work = () => {
     },
     {
       image: project2,
-      images: [project2, project1, project3],
+      images: [project2, project1, project3, casaSete4, casaSete5, casaSete6],
       title: "CASA SETE",
       location: "SETE LAGOAS MG",
       category: "CASA SETE",
