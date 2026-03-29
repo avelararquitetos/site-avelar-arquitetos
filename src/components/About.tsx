@@ -16,9 +16,12 @@ const About = () => {
                   À frente do Avelar Arquitetos, o arquiteto Daniel Avelar transforma sonhos em projetos há mais de 13 anos no mercado mineiro. Especializado em residências exclusivas, o escritório desenvolve cada projeto como uma resposta única às necessidades e estilo de vida dos clientes, sempre com um olhar contemporâneo e atento aos detalhes.
 
                   Com rigor técnico e sensibilidade estética, nossos projetos unem:
+
+
                   ✔ Funcionalidade inteligente - soluções personalizadas para cada modo de viver
                   ✔ Estética contemporânea - linhas limpas e integração de materiais
                   ✔ Detalhamento preciso - desde o estudo preliminar até a execução
+
 
                   Na Avelar Arquitetos, acreditamos que a melhor arquitetura é aquela que traduz personalidade em espaços que inspiram.
                 </p>
