@@ -63,7 +63,7 @@ const Work = () => {
     }
   ];
 
-  const categories = ["TODOS", "RESIDENCIAL", "COMERCIAL", "CULTURAL", "HOTELARIA"];
+  const categories = ["TODOS", "\n", "\n", "\n", "\n"];
 
   const filteredProjects = activeCategory === "TODOS" 
     ? projects 
