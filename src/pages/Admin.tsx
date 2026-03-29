@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Plus, Trash2, Upload, ArrowLeft, Star, GripVertical } from "lucide-react";
+import { Plus, Trash2, Upload, ArrowLeft, Star, GripVertical, LogOut } from "lucide-react";
 import { toast } from "sonner";
 
 type Project = {
@@ -30,6 +30,11 @@ type ProjectImage = {
 const Admin = () => {
   const queryClient = useQueryClient();
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    window.location.href = "/login";
+  };
   const [showNewProject, setShowNewProject] = useState(false);
   const [newProject, setNewProject] = useState({
     title: "", location: "", category: "", description: "", area: "", year: ""
@@ -286,10 +291,16 @@ const Admin = () => {
             <h1 className="text-3xl md:text-5xl font-light text-foreground">
               GERENCIAR PROJETOS
             </h1>
-            <Button onClick={() => setShowNewProject(!showNewProject)}>
-              <Plus className="w-4 h-4 mr-1" />
-              Novo Projeto
-            </Button>
+            <div className="flex gap-2">
+              <Button onClick={() => setShowNewProject(!showNewProject)}>
+                <Plus className="w-4 h-4 mr-1" />
+                Novo Projeto
+              </Button>
+              <Button variant="outline" onClick={handleLogout}>
+                <LogOut className="w-4 h-4 mr-1" />
+                Sair
+              </Button>
+            </div>
           </div>
 
           {/* New project form */}
