@@ -7,7 +7,7 @@ const Slideshow = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const { data: slides = [] } = useQuery({
-    queryKey: ["slideshow-landscape"],
+    queryKey: ["slideshow-10"],
     queryFn: async () => {
       const { data, error } = await supabase
         .from("project_images")
@@ -23,7 +23,6 @@ const Slideshow = () => {
       }));
 
       // Pick up to 2 images per project
-      // Pick up to 2 images per project
       const perProject = new Map<string, typeof all>();
       for (const slide of all) {
         const arr = perProject.get(slide.project_id) || [];
@@ -32,13 +31,15 @@ const Slideshow = () => {
           perProject.set(slide.project_id, arr);
         }
       }
-      const selected = Array.from(perProject.values()).flat();
+      let selected = Array.from(perProject.values()).flat();
 
-      // Shuffle
+      // Limit to 10 images
+      // Shuffle first
       for (let i = selected.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [selected[i], selected[j]] = [selected[j], selected[i]];
       }
+      selected = selected.slice(0, 10);
 
       return selected;
     },
@@ -70,13 +71,12 @@ const Slideshow = () => {
   return (
     <section className="relative h-screen overflow-hidden bg-foreground">
       {slides.map((slide, i) => (
-        <div
+        <img
           key={i}
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-out"
-          style={{
-            backgroundImage: `url(${slide.image})`,
-            opacity: current === i ? 1 : 0,
-          }}
+          src={slide.image}
+          alt={slide.concept}
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-out"
+          style={{ opacity: current === i ? 1 : 0 }}
         />
       ))}
 
