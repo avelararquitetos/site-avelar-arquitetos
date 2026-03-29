@@ -1,13 +1,21 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+
+const checkLandscape = (url: string): Promise<boolean> =>
+  new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve(img.naturalWidth >= img.naturalHeight * 1.2);
+    img.onerror = () => resolve(false);
+    img.src = url;
+  });
 
 const Slideshow = () => {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const { data: slides = [] } = useQuery({
-    queryKey: ["slideshow-images"],
+    queryKey: ["slideshow-landscape"],
     queryFn: async () => {
       const { data, error } = await supabase
         .from("project_images")
@@ -15,11 +23,25 @@ const Slideshow = () => {
         .order("display_order", { ascending: true });
 
       if (error) throw error;
-      return (data || []).map((img) => ({
+
+      const all = (data || []).map((img) => ({
         image: img.image_url,
         concept: (img.projects as any)?.title || "",
       }));
+
+      // Filter only landscape images
+      const checks = await Promise.all(all.map((s) => checkLandscape(s.image)));
+      const landscape = all.filter((_, i) => checks[i]);
+
+      // Shuffle
+      for (let i = landscape.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [landscape[i], landscape[j]] = [landscape[j], landscape[i]];
+      }
+
+      return landscape;
     },
+    staleTime: 1000 * 60 * 5,
   });
 
   const goTo = useCallback(
@@ -61,7 +83,7 @@ const Slideshow = () => {
 
       <div className="absolute bottom-16 left-12 md:left-20 lg:left-32 right-12 md:right-20 lg:right-32 z-10 flex items-end justify-between gap-8">
         <p
-          className={`text-white/90 text-lg md:text-2xl font-light max-w-xl leading-relaxed transition-all duration-600 ${
+          className={`text-white/90 text-lg md:text-2xl font-light max-w-xl leading-relaxed ${
             isTransitioning
               ? "opacity-0 translate-y-4"
               : "opacity-100 translate-y-0"
