@@ -30,13 +30,10 @@ const Slideshow = () => {
         project_id: img.project_id,
       }));
 
-      // Filter only landscape images
-      const checks = await Promise.all(all.map((s) => checkLandscape(s.image)));
-      const landscape = all.filter((_, i) => checks[i]);
-
       // Pick up to 2 images per project
-      const perProject = new Map<string, typeof landscape>();
-      for (const slide of landscape) {
+      // Pick up to 2 images per project
+      const perProject = new Map<string, typeof all>();
+      for (const slide of all) {
         const arr = perProject.get(slide.project_id) || [];
         if (arr.length < 2) {
           arr.push(slide);
