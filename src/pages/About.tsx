@@ -18,16 +18,16 @@ const About = () => {
                   <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
                     Transformando sonhos em projetos. Especializado em residências exclusivas, o escritório desenvolve cada projeto como uma resposta única às necessidades e estilo de vida dos clientes, sempre com um olhar contemporâneo e atento aos detalhes.
 
+
+
 Com rigor técnico e sensibilidade estética, nossos projetos unem:
-✔ Funcionalidade inteligente - soluções personalizadas para cada modo de viver
-✔ Estética contemporânea - linhas limpas e integração de materiais
-✔ Detalhamento preciso - desde o estudo preliminar até a execução
+✔ Funcionalidade inteligente - soluções personalizadas para cada modo de viver.
+✔ Estética contemporânea - linhas limpas e integração de materiais.
+✔ Detalhamento preciso - desde o estudo preliminar até a execução.
                   </p>
                   
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Fundado em 2015, nosso estúdio concluiu mais de 200 projetos nos 
-                    setores residencial, comercial e cultural. Cada projeto começa 
-                    com uma escuta atenta e termina com uma execução cuidadosa.
+                  <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
+                    Na Avelar Arquitetos, acreditamos que a melhor arquitetura é aquela que traduz personalidade em espaços que inspiram.
                   </p>
                 </div>
               </div>
