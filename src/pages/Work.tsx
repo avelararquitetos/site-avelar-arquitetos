@@ -203,6 +203,13 @@ const Work = () => {
           </div>
         </div>
       </section>
+
+      <ProjectLightbox
+        images={lightbox?.images || []}
+        title={lightbox?.title || ""}
+        isOpen={!!lightbox}
+        onClose={() => setLightbox(null)}
+      />
     </div>
   );
 };
