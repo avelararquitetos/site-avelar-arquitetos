@@ -130,7 +130,11 @@ const Work = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16 lg:gap-20">
               {filteredProjects.map((project, index) => (
-                <div key={index} className="group cursor-pointer">
+                <div 
+                  key={index} 
+                  className="group cursor-pointer"
+                  onClick={() => setLightbox({ images: project.images, title: project.title })}
+                >
                   <div className="relative overflow-hidden mb-8">
                     <img 
                       src={project.image} 
