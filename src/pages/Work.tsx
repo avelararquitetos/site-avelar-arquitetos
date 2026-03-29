@@ -10,35 +10,35 @@ const Work = () => {
     {
       image: project1,
       title: "CASA LAGOA",
-      location: "LAGOA SANTA, 2024",
-      category: "RESIDENCIAL",
+      location: "LAGOA SANTA MG",
+      category: "CASA LAGOA",
       description: "Uma casa contemporânea focada em luz, espaço e honestidade material. O design enfatiza linhas limpas e materiais naturais.",
       area: "450 M²",
       year: "2024"
     },
     {
       image: project2,
-      title: "SEDE CORPORATIVA",
-      location: "LONDRES, 2023",
-      category: "COMERCIAL",
+      title: "CASA SETE",
+      location: "SETE LAGOAS MG",
+      category: "CASA SETE",
       description: "Espaço de escritório moderno enfatizando colaboração e elementos naturais. Apresenta espaços de trabalho flexíveis e princípios de design sustentável.",
       area: "1200 M²",
       year: "2023"
     },
     {
       image: project3,
-      title: "CENTRO CULTURAL",
+      title: "CASA DO VALE",
       location: "TÓQUIO, 2023",
-      category: "CULTURAL",
+      category: "CASA DO VALE",
       description: "Arquitetura pública que conecta tradição com design contemporâneo. Um espaço para encontros comunitários e intercâmbio cultural.",
       area: "800 M²",
       year: "2023"
     },
     {
       image: project1,
-      title: "LOFT URBANO",
-      location: "BERLIM, 2024",
-      category: "RESIDENCIAL",
+      title: "APARTAMENTO NL",
+      location: "NOVA LIMA MG",
+      category: "APTº NL",
       description: "Herança industrial encontra vida contemporânea. Materiais brutos equilibrados com detalhes refinados.",
       area: "180 M²",
       year: "2024"
