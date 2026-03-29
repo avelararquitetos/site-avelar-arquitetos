@@ -1,14 +1,18 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
+import ProjectLightbox from "@/components/ProjectLightbox";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 
 const Work = () => {
   const [activeCategory, setActiveCategory] = useState("TODOS");
+  const [lightbox, setLightbox] = useState<{ images: string[]; title: string } | null>(null);
+
   const projects = [
     {
       image: project1,
+      images: [project1, project2, project3],
       title: "CASA LAGOA",
       location: "LAGOA SANTA MG",
       category: "CASA LAGOA",
@@ -18,6 +22,7 @@ const Work = () => {
     },
     {
       image: project2,
+      images: [project2, project1, project3],
       title: "CASA SETE",
       location: "SETE LAGOAS MG",
       category: "CASA SETE",
@@ -27,6 +32,7 @@ const Work = () => {
     },
     {
       image: project3,
+      images: [project3, project1, project2],
       title: "CASA DO VALE",
       location: "TÓQUIO, 2023",
       category: "CASA DO VALE",
@@ -36,6 +42,7 @@ const Work = () => {
     },
     {
       image: project1,
+      images: [project1, project3, project2],
       title: "APARTAMENTO NL",
       location: "NOVA LIMA MG",
       category: "APTº NL",
@@ -45,6 +52,7 @@ const Work = () => {
     },
     {
       image: project2,
+      images: [project2, project3, project1],
       title: "ESPAÇO GALERIA",
       location: "PARIS, 2022",
       category: "CULTURAL",
@@ -54,6 +62,7 @@ const Work = () => {
     },
     {
       image: project3,
+      images: [project3, project2, project1],
       title: "HOTEL BOUTIQUE",
       location: "MILÃO, 2023",
       category: "HOTELARIA",
@@ -121,7 +130,11 @@ const Work = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-16 lg:gap-20">
               {filteredProjects.map((project, index) => (
-                <div key={index} className="group cursor-pointer">
+                <div 
+                  key={index} 
+                  className="group cursor-pointer"
+                  onClick={() => setLightbox({ images: project.images, title: project.title })}
+                >
                   <div className="relative overflow-hidden mb-8">
                     <img 
                       src={project.image} 
@@ -190,6 +203,13 @@ const Work = () => {
           </div>
         </div>
       </section>
+
+      <ProjectLightbox
+        images={lightbox?.images || []}
+        title={lightbox?.title || ""}
+        isOpen={!!lightbox}
+        onClose={() => setLightbox(null)}
+      />
     </div>
   );
 };
