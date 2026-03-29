@@ -23,11 +23,7 @@ const About = () => {
                   Na Avelar Arquitetos, acreditamos que a melhor arquitetura é aquela que traduz personalidade em espaços que inspiram.
                 </p>
                 
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Fundado em 2015, nosso estúdio concluiu mais de 200 projetos nos 
-                  setores residencial, comercial e cultural. Cada projeto começa 
-                  com uma escuta atenta e termina com uma execução cuidadosa.
-                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed"></p>
               </div>
             </div>
             
