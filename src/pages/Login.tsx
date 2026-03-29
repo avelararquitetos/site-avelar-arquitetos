@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import logo from "@/assets/logo.png";
 import { toast } from "sonner";
 
 const Login = () => {
@@ -38,7 +39,7 @@ const Login = () => {
     <div className="min-h-screen bg-background flex items-center justify-center px-6">
       <div className="w-full max-w-sm space-y-8">
         <div className="text-center">
-          <img src="/src/assets/logo.png" alt="Avelar Arquitetos" className="h-8 mx-auto mb-2 dark:invert" />
+          <img src={logo} alt="Avelar Arquitetos" className="h-8 mx-auto mb-2 dark:invert" />
           <p className="text-muted-foreground">
             {isSignUp ? "Criar conta de administrador" : "Acesso administrativo"}
           </p>
