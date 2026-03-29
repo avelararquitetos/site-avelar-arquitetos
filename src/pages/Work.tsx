@@ -4,6 +4,9 @@ import ProjectLightbox from "@/components/ProjectLightbox";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import casaSete4 from "@/assets/casa-sete-4.png";
+import casaSete5 from "@/assets/casa-sete-5.png";
+import casaSete6 from "@/assets/casa-sete-6.png";
 
 const Work = () => {
   const [activeCategory, setActiveCategory] = useState("TODOS");
@@ -22,7 +25,7 @@ const Work = () => {
     },
     {
       image: project2,
-      images: [project2, project1, project3],
+      images: [project2, project1, project3, casaSete4, casaSete5, casaSete6],
       title: "CASA SETE",
       location: "SETE LAGOAS MG",
       category: "CASA SETE",
