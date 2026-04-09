@@ -49,7 +49,7 @@ Com rigor técnico e sensibilidade estética, nossos projetos unem:
                     </div>
                     <div className="border-l-2 border-architectural pl-6">
                       <h4 className="text-lg font-medium mb-2">Colaboração</h4>
-                      <p className="text-muted-foreground">Parceria próxima com clientes, engenheiros e artesãos</p>
+                      <p className="text-muted-foreground">Parceria próxima com clientes</p>
                     </div>
                     <div className="border-l-2 border-architectural pl-6">
                       <h4 className="text-lg font-medium mb-2">Inovação</h4>
