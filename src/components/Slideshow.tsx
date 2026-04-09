@@ -71,16 +71,21 @@ const Slideshow = () => {
   return (
     <section className="relative h-screen overflow-hidden bg-foreground">
       {slides.map((slide, i) => (
-        <img
+        <a
           key={i}
-          src={slide.image}
-          alt={slide.concept}
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-out"
-          style={{ opacity: current === i ? 1 : 0 }}
-        />
+          href={`/work`}
+          className="absolute inset-0 block transition-opacity duration-700 ease-out cursor-pointer"
+          style={{ opacity: current === i ? 1 : 0, pointerEvents: current === i ? "auto" : "none" }}
+        >
+          <img
+            src={slide.image}
+            alt={slide.concept}
+            className="w-full h-full object-cover"
+          />
+        </a>
       ))}
 
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
       <div className="absolute bottom-16 left-12 md:left-20 lg:left-32 right-12 md:right-20 lg:right-32 z-10 flex items-end justify-between gap-8">
         <p
