@@ -62,7 +62,7 @@ Com rigor técnico e sensibilidade estética, nossos projetos unem:
                   <div className="grid grid-cols-2 gap-8">
                     <div>
                       <h3 className="text-minimal text-muted-foreground mb-2">FUNDAÇÃO</h3>
-                      <p className="text-xl">2025</p>
+                      <p className="text-xl">2024</p>
                     </div>
                     <div>
                       <h3 className="text-minimal text-muted-foreground mb-2">PROJETOS</h3>
