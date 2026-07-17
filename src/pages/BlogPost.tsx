@@ -1,10 +1,21 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import { blogPosts } from "@/data/blogPosts";
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
   const post = blogPosts.find(p => p.id === id);
+
+  useEffect(() => {
+    if (post) {
+      document.title = `${post.title} | Avelar Arquitetos`;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', post.excerpt);
+      }
+    }
+  }, [post]);
 
   if (!post) {
     return (
