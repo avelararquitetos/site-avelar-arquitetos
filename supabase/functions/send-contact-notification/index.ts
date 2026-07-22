@@ -78,7 +78,7 @@ Deno.serve(async (req) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Avelar Arquitetos <onboarding@resend.dev>',
+        from: 'Avelar Arquitetos <contato@avelararquitetos.com.br>',
         to: ['contato@avelararquitetos.com.br'],
         reply_to: email,
         subject: `Novo contato pelo site: ${name}`,
