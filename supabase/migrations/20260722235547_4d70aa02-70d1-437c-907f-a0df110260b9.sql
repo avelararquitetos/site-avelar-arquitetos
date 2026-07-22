@@ -1,0 +1,16 @@
+UPDATE public.projects 
+SET description = 'Nesse apartamento, o desafio foi trazer a linguagem autoral do escritório para dentro de um apartamento de 280m². As colunas estruturais curvas foram revestidas em lâminas de madeira natural, transformando um elemento técnico em assinatura visual do projeto, enquanto os paineis de madeira organizam os ambientes sociais em um fluxo contínuo, da sala de estar à sala de jantar. Grandes janelas garantem vista aberta para a cidade, e a paleta de materiais cria uma atmosfera sofisticada e ao mesmo tempo acolhedora.',
+    area = '280 m²'
+WHERE id = '60122259-c87d-40da-aeff-77a05dd94b84';
+
+UPDATE public.projects 
+SET description = 'A Casa Recanto responde a um programa mais contido com uma arquitetura igualmente precisa. A fachada combina um volume branco limpo com um detalhe em pedra que ancora a composição, enquanto o jardim de inverno com pé-direito duplo traz verticalidade e luz natural para o centro da casa. A cozinha integrada e a sala de estar voltada para a área externa reforçam o caráter social do projeto, pensado para o dia a dia de uma família que valoriza espaços funcionais sem perder sofisticação.'
+WHERE id = '31d908dd-f746-4b7b-bc06-834b8293d89b';
+
+UPDATE public.projects 
+SET description = 'A Casa Sete é uma síntese dos materiais que definem a linguagem autoral do escritório: pedra bruta, madeira e estrutura metálica em preto fosco, combinados em uma fachada de grande presença, sustentada por uma cobertura em balanço que se projeta sobre a entrada e se funde ao paisagismo através de trepadeiras que descem da estrutura. A casa se organiza em torno de um pátio central — um espaço que a própria casa abraça, protegido e ao mesmo tempo aberto, onde a piscina, o deck de madeira e os ambientes de estar se encontram. Esse pátio é o elo entre a vida social da casa e seus momentos mais íntimos: de um lado, a integração com a área de convívio; do outro, a proximidade com os ambientes privados, tudo sob o mesmo olhar da arquitetura.'
+WHERE id = '283b6831-f54e-4239-84bd-d450cc510565';
+
+UPDATE public.projects 
+SET description = 'A Casa Lagoa se apresenta pela fachada: um grande painel ripado em madeira que confere imponência sem recorrer a excessos, sustentando uma linguagem minimalista e ao mesmo tempo calorosa. Esse painel é o elemento de assinatura do projeto, e organiza a leitura de todo o volume frontal da casa. Nos fundos, o paisagismo foi desenhado para abraçar literalmente a casa — vegetação, piscina e um fire pit se conectam em um único gesto de projeto, criando um cenário contínuo entre arquitetura e jardim. Internamente, os 520m² se organizam em ambientes profundamente integrados entre si e com o exterior: a sala de estar e a sala de tv formam um espaço de convívio aconchegante, com pé-direito revestido em madeira e vista constante para o jardim. A escada, embora não seja o ponto de partida do projeto, reforça essa mesma materialidade em sua conexão vertical entre os pavimentos.'
+WHERE id = 'fa9d0f82-a778-49cc-afb7-e1b5626207c5';
