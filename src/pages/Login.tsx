@@ -10,7 +10,6 @@ const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isSignUp, setIsSignUp] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -18,15 +17,9 @@ const Login = () => {
     setLoading(true);
 
     try {
-      if (isSignUp) {
-        const { error } = await supabase.auth.signUp({ email, password });
-        if (error) throw error;
-        toast.success("Conta criada! Você já está logado.");
-      } else {
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) throw error;
-        toast.success("Login realizado!");
-      }
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      toast.success("Login realizado!");
       navigate("/admin");
     } catch (error: any) {
       toast.error(error.message || "Erro na autenticação");
@@ -40,9 +33,7 @@ const Login = () => {
       <div className="w-full max-w-sm space-y-8">
         <div className="text-center">
           <img src={logo} alt="Avelar Arquitetos" className="h-8 mx-auto mb-2 dark:invert" />
-          <p className="text-muted-foreground">
-            {isSignUp ? "Criar conta de administrador" : "Acesso administrativo"}
-          </p>
+          <p className="text-muted-foreground">Acesso administrativo</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -62,16 +53,9 @@ const Login = () => {
             minLength={6}
           />
           <Button type="submit" className="w-full" disabled={loading}>
-            {loading ? "Aguarde..." : isSignUp ? "Criar Conta" : "Entrar"}
+            {loading ? "Aguarde..." : "Entrar"}
           </Button>
         </form>
-
-        <button
-          onClick={() => setIsSignUp(!isSignUp)}
-          className="block w-full text-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          {isSignUp ? "Já tem conta? Fazer login" : "Primeiro acesso? Criar conta"}
-        </button>
       </div>
     </div>
   );
