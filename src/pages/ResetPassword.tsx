@@ -4,6 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import logo from "@/assets/logo.png";
+import Footer from "@/components/Footer";
 import { toast } from "sonner";
 
 const ResetPassword = () => {
@@ -48,41 +49,44 @@ const ResetPassword = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center px-6">
-      <div className="w-full max-w-sm space-y-8">
-        <div className="text-center">
-          <img src={logo} alt="Avelar Arquitetos" className="h-8 mx-auto mb-2 dark:invert" />
-          <p className="text-muted-foreground">Definir nova senha</p>
-        </div>
+    <div className="min-h-screen bg-background flex flex-col px-6">
+      <div className="flex-1 flex items-center justify-center">
+        <div className="w-full max-w-sm space-y-8">
+          <div className="text-center">
+            <img src={logo} alt="Avelar Arquitetos" className="h-8 mx-auto mb-2 dark:invert" />
+            <p className="text-muted-foreground">Definir nova senha</p>
+          </div>
 
-        {!ready ? (
-          <p className="text-center text-sm text-muted-foreground">
-            Validando link de recuperação...
-          </p>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input
-              type="password"
-              placeholder="Nova senha"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              minLength={6}
-            />
-            <Input
-              type="password"
-              placeholder="Confirmar nova senha"
-              value={confirm}
-              onChange={(e) => setConfirm(e.target.value)}
-              required
-              minLength={6}
-            />
-            <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? "Salvando..." : "Salvar nova senha"}
-            </Button>
-          </form>
-        )}
+          {!ready ? (
+            <p className="text-center text-sm text-muted-foreground">
+              Validando link de recuperação...
+            </p>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <Input
+                type="password"
+                placeholder="Nova senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                minLength={6}
+              />
+              <Input
+                type="password"
+                placeholder="Confirmar nova senha"
+                value={confirm}
+                onChange={(e) => setConfirm(e.target.value)}
+                required
+                minLength={6}
+              />
+              <Button type="submit" className="w-full" disabled={loading}>
+                {loading ? "Salvando..." : "Salvar nova senha"}
+              </Button>
+            </form>
+          )}
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import Navigation from "@/components/Navigation";
 import ProjectLightbox from "@/components/ProjectLightbox";
+import Footer from "@/components/Footer";
 
 type ProjectWithImages = {
   id: string;
@@ -185,6 +186,7 @@ const Work = () => {
         isOpen={!!lightbox}
         onClose={() => setLightbox(null)}
       />
+      <Footer />
     </div>
   );
 };

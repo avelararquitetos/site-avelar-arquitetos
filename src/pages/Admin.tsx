@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -283,9 +284,9 @@ const Admin = () => {
 
   // Projects list view
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
-      <section className="pt-32 pb-20">
+      <section className="flex-1 pt-32 pb-20">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="flex items-center justify-between mb-12">
             <h1 className="text-3xl md:text-5xl font-light text-foreground">
@@ -379,6 +380,7 @@ const Admin = () => {
           )}
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

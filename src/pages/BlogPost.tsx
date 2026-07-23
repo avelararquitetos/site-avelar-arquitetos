@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { blogPosts } from "@/data/blogPosts";
 
 const BlogPost = () => {
@@ -149,6 +150,7 @@ const BlogPost = () => {
           </div>
         </div>
       </article>
+      <Footer />
     </div>
   );
 };
