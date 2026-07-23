@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -271,6 +273,17 @@ const Contact = () => {
                       >
                         {status === "loading" ? "Enviando..." : "Enviar mensagem"}
                       </Button>
+
+                      <p className="text-sm text-muted-foreground">
+                        Ao enviar, você concorda com nossa{" "}
+                        <Link
+                          to="/politica-de-privacidade"
+                          className="underline underline-offset-4 hover:text-foreground transition-colors"
+                        >
+                          Política de Privacidade
+                        </Link>
+                        .
+                      </p>
                     </form>
                   )}
                 </div>
